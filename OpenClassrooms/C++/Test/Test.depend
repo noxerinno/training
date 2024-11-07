@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1520128028 source:d:\documents\programmation\perso\test\main.cpp
+	<iostream>
+	"Duree.h"
+
+1520127969 
+
+1520127764 d:\documents\programmation\perso\test\include\duree.h
+
+1520127969 source:d:\documents\programmation\perso\test\src\duree.cpp
+	<iostream>
+	"Duree.h"
+	<math.h>
+
+1521396391 source:/home/frantz/Documents/Programmation/Preso/Test/main.cpp
+	<iostream>
+	"Duree.h"
+
+1521062943 /home/frantz/Documents/Programmation/Preso/Test/include/Duree.h
+
+1521063020 source:/home/frantz/Documents/Programmation/Preso/Test/src/Duree.cpp
+	<iostream>
+	"Duree.h"
+	<math.h>
+
+1522349093 source:/home/frantz/Documents/Programmation/C++/Preso/Test/main.cpp
+	<iostream>
+	"Duree.h"
+
+1522349948 /home/frantz/Documents/Programmation/C++/Preso/Test/include/Duree.h
+	<iostream>
+
+1522349939 source:/home/frantz/Documents/Programmation/C++/Preso/Test/src/Duree.cpp
+	<iostream>
+	"Duree.h"
+	<math.h>
+

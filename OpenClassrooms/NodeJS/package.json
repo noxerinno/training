@@ -1,0 +1,11 @@
+{
+    "name": "serveur_test",
+    "version": "0.1.0",
+    "dependencies": {
+        "markdown": "~0.5"
+
+        // "markdown": "0.3.5" // Version 0.3.5 uniquement
+        // "markdown": "~0.3.5" // OK pour les versions 0.3.5, 0.3.6, 0.3.7, etc. jusqu'à la version 0.4.0 non incluse
+        // "markdown": "~0.3" // OK pour les versions 0.3.X, 0.4.X, 0.5.X jusqu'à la version 1.0.0 non incluse
+    }
+}

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1548202056 source:/home/frantz/Documents/Programmation/OpenClassrooms/C++/TP mot mystère/TP_mot_mystère/main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+
