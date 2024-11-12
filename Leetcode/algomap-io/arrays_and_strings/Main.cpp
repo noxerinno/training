@@ -1,15 +1,16 @@
 #include <iostream>
 #include <vector>
 
-#include "Closest_to_zero"
+#include "ClosestToZero.h"
 
 using namespace std;
 
 int main()
 {
-    vector<int> nums = { 10, -4, -2, 18451, 4, 8 };
+	ClosestToZero ctz;
+	vector<int> nums = {10, -4, -2, 18451, 4, 8};
 
-    cout << findClosestNumber(nums);
+	cout << ctz.findClosestNumber(nums);
 
-    return 0;
+	return 0;
 }

@@ -1,12 +1,16 @@
 #ifndef CLOSESTTOZERO_H
 #define CLOSESTTOZERO_H
 
-class ClosestToZero {
+#include <vector>
+
+class ClosestToZero
+{
 public:
-  int findClosestNumber(std::vector<int> &nums);
+	ClosestToZero();
+	int findClosestNumber(std::vector<int>& nums);
 
 private:
-  bool myCompare(int i, int j);
+	static bool myCompare(int i, int j);
 
 protected:
 };

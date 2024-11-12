@@ -1,16 +1,18 @@
+#include "ClosestToZero.h"
 #include <algorithm>
 #include <cmath>
-#include <vector>
 
 using namespace std;
 
-class ClosestToZero {
-public:
-  int findClosestNumber(vector<int> &nums) {
-    sort(nums.begin(), nums.end(), myCompare);
-    return (nums[-1]);
-  }
+ClosestToZero::ClosestToZero() { }
 
-private:
-  bool myCompare(int i, int j) { return (abs(i) < abs(j)); }
-};
+int ClosestToZero::findClosestNumber(vector<int>& nums)
+{
+	sort(nums.begin(), nums.end(), myCompare);
+	return (abs(nums[0]));
+}
+
+bool ClosestToZero::myCompare(int i, int j)
+{
+	return (abs(i) < abs(j));
+}
