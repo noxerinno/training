@@ -21,7 +21,7 @@ int main()
     MergeStringsAlternately msa;
 
     string word1 = "wordone";
-    string word2 = "wordrwo";
+    string word2 = "wordtwoSUITE";
 
     cout << msa.mergeAlternately(word1, word2);
 
