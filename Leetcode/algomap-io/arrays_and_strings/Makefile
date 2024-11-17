@@ -5,6 +5,7 @@ FLAGS = -Wall -Wextra -std=c++14 -pedantic
 
 # Directories
 SRC_DIR = ./src
+MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp $(SRC_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
@@ -24,8 +25,8 @@ NO_STDOUT = 1>/dev/null
 NO_STDERR = 2>/dev/null
 NO_PROMPT = $(NO_STDOUT) $(NO_STDERR)
 
-all: create_filesystem
-	@ $(CC) $(FLAGS) $(MAIN) -o $(OUTPUT)
+all: filesystem
+	@ $(CC) $(FLAGS) $(MAIN) $(MODULES) -o $(OUTPUT)
 	@ $(OUTPUT)
 
 filesystem:	
