@@ -1,7 +1,5 @@
 #include <cstddef>
-#include <iostream>
 #include <string>
-#include <typeinfo>
 
 #include "MergeStringsAlternately.h"
 

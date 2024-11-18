@@ -2,8 +2,8 @@
 #define MERGESTRINGSALTERNATELY_H
 
 #include <cstddef>
-#include <sstream>
 #include <string>
+
 class MergeStringsAlternately {
 public:
     MergeStringsAlternately();
