@@ -5,7 +5,7 @@ FLAGS = -Wall -Wextra -std=c++14 -pedantic
 
 # Directories
 SRC_DIR = ./src
-MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp $(SRC_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp
+MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp $(SRC_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp $(SRC_DIR)/romanToInteger/RomanToInteger.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include

@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 
-//#include "ClosestToZero.h"
-//#include "MergeStringsAlternately.h"
-#include "mergeStringsAlternately/MergeStringsAlternately.h"
+//#include "closestToZero/ClosestToZero.h"
+//#include "mergeStringsAlternately/MergeStringsAlternately.h"
+#include "romanToInteger/RomanToInteger.h"
 
 using namespace std;
 
@@ -18,12 +18,19 @@ int main()
     */
 
     //MERGE STRING ALTERNATELY
-    MergeStringsAlternately msa;
+    /*MergeStringsAlternately msa;
 
     string word1 = "wordone";
     string word2 = "wordtwoSUITE";
 
-    cout << msa.mergeAlternately(word1, word2);
+    cout << msa.mergeAlternately(word1, word2);*/
+
+    //ROMAN TO INTEGER
+    RomanToInteger rti;
+    
+    string romanNumber = "I";
+
+    cout << rti.romanToInt(romanNumber);
 
 	return 0;
 }
