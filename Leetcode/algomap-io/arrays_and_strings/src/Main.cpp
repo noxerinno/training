@@ -28,7 +28,7 @@ int main()
     //ROMAN TO INTEGER
     RomanToInteger rti;
     
-    string romanNumber = "I";
+    string romanNumber = "MCMXCIV";
 
     cout << rti.romanToInt(romanNumber);
 

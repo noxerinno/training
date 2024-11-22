@@ -10,8 +10,6 @@ public:
     int romanToInt(std::string s);
 
 private:
-    // std::map<std::string, int> defaultRomanNumbers();
-    //std::map<std::string, int> specialRomanNumbers();
     void initializeDefaultRomanNumbers(std::map<char, int>* defaultRomanNumbers);
     void initializeSpecialRomanNumbers(std::map<std::string, int>* specialRomanNumbers);
 
