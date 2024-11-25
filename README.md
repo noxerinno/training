@@ -1,2 +1,2 @@
 # training
-My trainings reporitory
+My training reporitory
