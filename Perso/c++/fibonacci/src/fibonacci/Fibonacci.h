@@ -7,8 +7,8 @@
 class Fibonacci {
     public:
         Fibonacci();
-        std::vector<int> getFibonacciSequence(int size);
-        std::vector<int> getFibonacciSequence(int size, int mode);
+        std::vector<long> getFibonacciSequence(int size);
+        std::vector<long> getFibonacciSequence(int size, int mode);
     private:
         long recursiveFibonacci(int index);
         long dynamicFibonacci(int index, std::unordered_map<int, long> &alreadyCalculatedIndex);

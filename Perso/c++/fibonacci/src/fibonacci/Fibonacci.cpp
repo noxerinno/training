@@ -4,12 +4,12 @@ using namespace std;
 
 Fibonacci::Fibonacci() {}
 
-vector<int> Fibonacci::getFibonacciSequence(int size) {
+vector<long> Fibonacci::getFibonacciSequence(int size) {
     return getFibonacciSequence(size, 0);
 }
 
-vector<int> Fibonacci::getFibonacciSequence(int size, int mode) {
-    vector<int> result;
+vector<long> Fibonacci::getFibonacciSequence(int size, int mode) {
+    vector<long> result;
 
     if (mode == 0) {
         unordered_map<int, long> alreadyCalculatedIndex;
