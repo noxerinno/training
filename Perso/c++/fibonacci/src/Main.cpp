@@ -8,7 +8,7 @@ using namespace std;
 int main(){
     Fibonacci fib;
 
-    vector<int> fibonacciSequence = fib.getFibonacciSequence(25);
+    vector<int> fibonacciSequence = fib.getFibonacciSequence(50, 0);
 
     for (int element : fibonacciSequence) {
         cout << element << ' ';
