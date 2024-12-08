@@ -54,14 +54,33 @@ def compute(x , y):
         result += 1
 
 
+##Problem 2
+result2 = 0
+validWords = ["MAS", "SAM"]
+
+def computeSecondProblem(x, y):
+    global result2
+
+    # Looking "north-west" to "south east"
+    if x > 0 and x < gridHeight-1 and y > 0 and y < gridWidth-1:
+        diagWord1 = grid[x-1][y-1] + 'A' + grid[x+1][y+1]
+        diagWord2 = grid[x+1][y-1] + 'A' + grid[x-1][y+1]
+
+        if diagWord1 in validWords and diagWord2 in validWords:
+            result2 += 1
+
 for x in range(gridHeight):
     for y in range(gridWidth):
         if grid[x][y] == firstLetter:
             compute(x, y)
+            
+        if grid[x][y] == thirdLetter:
+            computeSecondProblem(x, y)
 
 
 # print("Width : " + str(gridWidth) + "\nHeight : " + str(gridHeight))
 # print(grid[1][1])
 # print(grid[1][2])
 
-print(result)
+print("Result problem 1 : " + str(result))
+print("Result problem 2 : " + str(result2))
