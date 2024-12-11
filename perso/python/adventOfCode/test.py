@@ -4,8 +4,8 @@
 #
 # print(grid[0][len(grid[0])-1])
 
-list1 = [1,3,5,7,9,11]
-list2 = [1,5,11]
+# list1 = [1,3,5,7,9,11]
+# list2 = [1,5,11]
 
 # if set(list1) <=set(list1):
 #     print("oui")
@@ -18,4 +18,11 @@ list2 = [1,5,11]
 
 # print(len(list2)/2)
 
-print(list1[:3])
+# print(list1[:3])
+
+# temp = 3
+# temp -= 1
+# print(temp)
+
+string = "Je ne sais aps quoi écrire"
+print(string.count('e'))
