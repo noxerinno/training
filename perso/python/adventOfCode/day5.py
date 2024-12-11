@@ -17,6 +17,18 @@ def computeOrderMap(rulesList):
         
         orderMap[firstPageNum] = [secondPageNum]
 
+def addMiddleValue(update):
+    global result
+    middleIndex = float(len(update))/2
+    
+    if middleIndex % 2 != 0:
+        middleIndex = int(middleIndex - .5)
+    else:
+        middleIndex = int(middleIndex - 1)
+        
+    result +=  int(update[middleIndex])
+
+
 # Input file reading and data extraction
 with open("rsc/day5.txt", 'r') as inputFile:
     parts = inputFile.read().split("\n\n")
@@ -25,26 +37,51 @@ with open("rsc/day5.txt", 'r') as inputFile:
 
     computeOrderMap(rulesList)
 
+# print(orderMap)
+# print("")
+
 for update in updates:
     update = update.split(',')
     revertedUpdate = list(reversed(update))
+    invalidIndexes = []
 
     for index in range(len(revertedUpdate)):
         # Check if an element of the reverted list is not places after another element it shouldn't
         if revertedUpdate[index] in orderMap and len([i for i in revertedUpdate[index+1:] if i in orderMap[revertedUpdate[index]]]) > 0:
-            isValidUpdate = False
-            break
+            if isValidUpdate:
+                isValidUpdate = False
 
-    if isValidUpdate:
-        middleIndex = float(len(update))/2
+            invalidIndexes.append((len(update) - 1 ) - index) # Invert indexes from reverted update
+            
 
-        if middleIndex % 2 != 0:
-            middleIndex = int(middleIndex - .5)
-        else:
-            middleIndex = int(middleIndex - 1)
+    # if isValidUpdate:
+    #     addMiddleValue(update)    
+
+    ## Problem 2
+    if not isValidUpdate:
+        invalidIndexes = sorted(invalidIndexes)
         
-        result +=  int(update[middleIndex])
+        # print("Invalid update : " + str(update) + " - Invalid indexes : " + str(invalidIndexes))
+        # print("Before : " + str(update))
 
+        # Swaping wrongly placed page numbers
+        for invalidIndex in invalidIndexes:
+            if invalidIndex == 1:
+                update[0], update[invalidIndex] = update[invalidIndex], update[0]
+                continue
+
+            if update[invalidIndex] in orderMap:
+                # Get wich pageNum is wrongly placed before the considered invalid page number
+                # print("Update until invalidIndex (" + str(invalidIndex) + ") : " + str(update[:invalidIndex]) + '\n')
+                for pageNumToSwap in update[:invalidIndex]:
+                    if pageNumToSwap in orderMap[update[invalidIndex]]:
+                        toSwapIndex = update.index(pageNumToSwap)
+                        update[toSwapIndex], update[invalidIndex] = update[invalidIndex], update[toSwapIndex]
+                        
+
+        # print("After : " + str(update) + '\n')
+        addMiddleValue(update)
+    
     isValidUpdate = True
 
 print(result)

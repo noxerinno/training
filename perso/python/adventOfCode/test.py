@@ -16,4 +16,6 @@ list2 = [1,5,11]
 #     # print((list2[:index] + list2[index+1:]))
 #     print(list2[index+1:])
 
-print(len(list2)/2)
+# print(len(list2)/2)
+
+print(list1[:3])
