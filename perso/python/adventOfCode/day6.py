@@ -1,3 +1,5 @@
+from itertools import combinations
+
 ## Problem 1
 maze = []
 mazeHeight = 0
@@ -41,41 +43,25 @@ def isNextStepObstructed(x, y):
     global direction
     global isNextStepAChangeOfDirection
 
-    if direction == "UP":
-        if x-2 >= 0 and maze[x-2][y] == '#':
-            isNextStepAChangeOfDirection = True
-            return
+    if direction == "UP" and maze[x-1][y] == '#':
+        direction = "RIGHT"
+        isNextStepAChangeOfDirection = True
+        return
 
-        if maze[x-1][y] == '#':
-            direction = "RIGHT"
-            return
-
-    if direction == "RIGHT":
-        if y+2 < mazeWidth and maze[x][y+2] == '#':
-            isNextStepAChangeOfDirection = True
-            return
-
-        if maze[x][y+1] == '#':
-            direction = "DOWN"
-            return
+    if direction == "RIGHT" and maze[x][y+1] == '#':
+        direction = "DOWN"
+        isNextStepAChangeOfDirection = True
+        return
     
-    if direction == "DOWN":
-        if x+2 < mazeHeight and maze[x+2][y] == '#':
-            isNextStepAChangeOfDirection = True
-            return
+    if direction == "DOWN" and maze[x+1][y] == '#':
+        direction = "LEFT"
+        isNextStepAChangeOfDirection = True
+        return
 
-        if maze[x+1][y] == '#':
-            direction = "LEFT"
-            return
-
-    if direction == "LEFT":
-        if y-2 >= 0 and maze[x][y-2] == '#':
-            isNextStepAChangeOfDirection = True
-            return
-        
-        if maze[x][y-1] == '#':
-            direction = "UP"
-            return
+    if direction == "LEFT" and maze[x][y-1] == '#':
+        direction = "UP"
+        isNextStepAChangeOfDirection = True
+        return
     
     return False
 
@@ -102,29 +88,111 @@ def takeStep():
 
 
 ## Problem 2
-loopCounter = 0
+verticalPathChar = ['|', '+', '^']
+horizontalPathChar = ['-', '+', '^']
+validLoopCount = 0
+
+def displayMaze(maze):
+    for line in maze:
+        print(line)
+    print('\n')
+
+def doesConnectToPath(line):
+    connectToPath = False
+
+    # If there is no turn, there is no loop
+    if len(line) == 0 or '+' not in line:
+        return connectToPath
+
+    parts = line.split('+')
+    for part in parts:
+        if len(part) == 0:
+            break
+
+        # If it directly connect to path
+        if part[0] in horizontalPathChar:
+            connectToPath = True
+            break
+
+        # If there is an obstacle on the way, we break
+        if '#' in part:
+            break
+
+    return connectToPath
+
+def checkLoop(x, y):
+    global validLoopCount
+
+    tempMaze = maze
+
+    # if direction == "UP" and y+1 < mazeWidth and maze[x][y+1] in horizontalPathChar and '+' in maze[x][y+1:]:
+    if direction == "UP" and y+1 < mazeWidth:
+        line = maze[x][y+1:]
+        
+        if doesConnectToPath(line):
+            validLoopCount += 1
+            tempMaze[x-1] = tempMaze[x-1][:y] + 'O' + tempMaze[x-1][y+1:] 
+            displayMaze(tempMaze)
+
+    # if direction == "RIGHT" and x+1 < mazeHeight and maze[x+1][y] in verticalPathChar:
+    if direction == "RIGHT" and x+1 < mazeHeight:
+        # Retreive line chars
+        line = ""
+        tempX = x 
+        while(tempX < mazeHeight - 1):
+            tempX += 1
+            line += maze[tempX][y]
+
+        # Check if there is a turn in the vertical line 
+        if doesConnectToPath(line):
+            validLoopCount += 1
+            tempMaze[x] = tempMaze[x][:y+1] + 'O' + tempMaze[x][y+2:]
+            displayMaze(tempMaze)
+
+    # if direction == "DOWN" and y-1 >= 0 and maze[x][y-1] in horizontalPathChar and '+' in maze[x][:y-1]:
+    if direction == "DOWN" and y-1 >= 0:
+        line = maze[x][:y-1]
+
+        if doesConnectToPath(line[::-1]):
+            validLoopCount += 1
+            tempMaze[x+1] = tempMaze[x+1][:y] + 'O' + tempMaze[x+1][y+1:] 
+            displayMaze(tempMaze)
+
+    # if direction == "LEFT" and x-1 >= 0 and maze[x-1][y] in verticalPathChar:
+    if direction == "LEFT" and x-1 >= 0:
+        # Retreive line chars 
+        line = ""
+        tempX = x
+        while(tempX > 0):
+            tempX -= 1
+            line += maze[tempX][y]
+
+        # Check if there is a turn in the vertical line 
+        if doesConnectToPath(line[::-1]):
+            validLoopCount += 1
+            tempMaze[x] = tempMaze[x][:y-1] + 'O' + tempMaze[x][y:]
+            displayMaze(tempMaze)
+
 
 def displayPath(x, y):
     global isNextStepAChangeOfDirection
-    global loopCounter
 
+    # Don't touch the starting point
     if maze[x][y] == '^':
         return
 
+    # Handle turns and closing loops
     if isNextStepAChangeOfDirection or maze[x][y] == '|' or maze[x][y] == '-':
         maze[x] = maze[x][:y] + '+' + maze[x][y+1:]
         isNextStepAChangeOfDirection = False
         return
 
-    if maze[x][y] == '|' or maze[x][y] == '-':
-        maze[x] = maze[x][:y] + '+' + maze[x][y+1:]
-        loopCounter += 1
-        return
-
+    # Display standard vertical path
     if direction == "UP" or direction == "DOWN":
         maze[x] = maze[x][:y] + '|' + maze[x][y+1:]
         return
 
+    # Display standard horizontal path
     if direction == "LEFT" or direction == "RIGHT":
         maze[x] = maze[x][:y] + '-' + maze[x][y+1:]
         return
@@ -137,20 +205,23 @@ count = 0
 while(True):
     count += 1
 
-    displayPath(currentX, currentY)
-     
+    checkLoop(currentX, currentY)
+ 
     # While True loop base case
     if isNextStepOutOfMaze(currentX, currentY) or count > 100000:
+        displayPath(currentX, currentY)
         break
 
     # Checcking if next step is obstructed, if so, changing direction
     isNextStepObstructed(currentX, currentY)
 
+    displayPath(currentX, currentY)
+
     # print("Direction : " + direction + " - Coordonnées : (" + str(currentX) + ", " + str(currentY) + ")")
     takeStep()
 
-for line in maze:
-    print(line)
-    # result += line.count('X')
 
-print(loopCounter)
+# Display maze and count problem result
+displayMaze(maze)
+
+print(validLoopCount)    

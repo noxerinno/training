@@ -24,5 +24,74 @@
 # temp -= 1
 # print(temp)
 
-string = "Je ne sais aps quoi écrire"
-print(string.count('e'))
+# string = "Je ne sais aps quoi écrire"
+# print(string.count('e'))
+
+# testTuple = (1,[1])
+# print(testTuple)
+#
+# testTuple = testTuple.append(3)
+# print(testTuple)
+
+
+# a_list = [][]
+# N = 3
+# a_list = [ [] for _ in range(N) ]
+#
+# for lis in a_list:
+#     # for iter in range(a_list.index(lis)):
+#     #     lis.append((iter, iter*iter))
+#     print(a_list.index())    
+#
+# print(a_list)
+
+
+# string = "Ceci est une chaine de charactère de test"
+# pivot = 16
+#
+# print(string[pivot])
+# print(string[pivot:])
+
+# tab = ["..T..",
+#        "..T..",
+#        "..T..",
+#        "..X..",
+#        "..U..",
+#        "..U.."]
+#
+# for x in range(len(tab)):
+#     if 'X' in tab[x]:
+#         y = tab[x].index('X')
+#
+#         before = []
+#         after = []
+#
+#         tempX = x
+#         while(tempX > 0):
+#             tempX -= 1
+#             before.append(tab[tempX][y])
+#
+#         tempX = x 
+#         while(tempX < len(tab) - 1):
+#             tempX += 1
+#             after.append(tab[tempX][y])
+#
+#         print(before)
+#         print(after)
+
+
+# string = "........P------"
+#
+# print(string.split('T'))
+# print(string[::-1])
+
+
+tab = ['J', 'e', ' ', 'n', 'e', ' ', 's', 'a', 'i', 's', ' ', 'p', 'a', 's']
+
+print(tab)
+
+string = ""
+for letter in tab:
+    string += letter
+
+print(string)
