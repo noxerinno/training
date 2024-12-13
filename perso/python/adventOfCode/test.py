@@ -86,12 +86,37 @@
 # print(string[::-1])
 
 
-tab = ['J', 'e', ' ', 'n', 'e', ' ', 's', 'a', 'i', 's', ' ', 'p', 'a', 's']
+# tab = ['J', 'e', ' ', 'n', 'e', ' ', 's', 'a', 'i', 's', ' ', 'p', 'a', 's']
+#
+# print(tab)
+#
+# string = ""
+# for letter in tab:
+#     string += letter
+#
+# print(string)
 
-print(tab)
+l = ['0', '1', '254', '3', '4']
+l1 = [2, 0, 1, 1, 0]
+l2 = []
+# print(l)
+# l.pop(2)
+# print(l)
+#
+# l.insert(0, '2345')
+# print(l)
+# print(l[-1])
 
-string = ""
-for letter in tab:
-    string += letter
+for i in range(len(l1)):
+    if l1[i] == 2:
+        l2.append(l[i])
+        print(l2)
+        continue
+    
+    if l1[i] == 1:
+        print(l2[-1])
+        l2[-1] = l2[-1] + l[i]
+        continue
 
-print(string)
+    l2.append(l[i])
+    print(l2)
