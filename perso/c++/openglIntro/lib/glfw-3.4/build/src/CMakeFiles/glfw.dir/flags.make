@@ -6,5 +6,5 @@ C_DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
 
 C_INCLUDES = -I/home/frantz/Documents/dev/training/perso/c++/openglIntro/lib/glfw-3.4/include -I/home/frantz/Documents/dev/training/perso/c++/openglIntro/lib/glfw-3.4/src -I/home/frantz/Documents/dev/training/perso/c++/openglIntro/lib/glfw-3.4/build/src
 
-C_FLAGS = -fPIC -Wall -std=c99
+C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -std=c99
 

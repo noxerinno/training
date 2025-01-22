@@ -133,6 +133,9 @@ if (GLFW_BUILD_DOCS)
     add_subdirectory(docs)
 endif()
 
+#add_subdirectory(/home/frantz/Documents/dev/training/perso/c++/openglIntro/lib/glfw-3.4/include/GLFW)
+#target_link_libraries(openglIntro glfw)
+
 #--------------------------------------------------------------------
 # Install files other than the library
 # The library is installed by src/CMakeLists.txt

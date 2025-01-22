@@ -1,4 +1,8 @@
 ###### Defining global vars ######
+# General
+PROG_NAME = my_prog
+PROG_VERSION = 0.1.0
+
 # Compiler
 CC = g++
 FLAGS = -Wall -Wextra -std=c++14 -pedantic
@@ -12,9 +16,14 @@ INCLUDE_DIR = ./include
 LIB_DIR = ./lib
 TEST_DIR = ./tests
 
+# Builder
+CMAKE_LISTS = CMakeLists.txt
+CMAKE_MIN_VERSION = 3.0.0
+CMAKE_OUTPUT = $(BUILD_DIR)/$(PROG_NAME)
+
 # Files
 MAIN = $(SRC_DIR)/Main.cpp
-OUTPUT = $(BUILD_DIR)/main.o
+OUTPUT = $(BUILD_DIR)/Main.o
 README = README.md
 
 ###### Defining prompt colors & utils ###### 
@@ -26,8 +35,12 @@ NO_STDERR = 2>/dev/null
 NO_PROMPT = $(NO_STDOUT) $(NO_STDERR)
 
 all: filesystem
-	@ $(CC) $(FLAGS) $(MAIN) $(MODULES) -o $(OUTPUT)
-	@ $(OUTPUT)
+	@ #$(CC) $(FLAGS) $(MAIN) $(MODULES) -o $(OUTPUT)
+	@ #$(OUTPUT)
+	@ cd $(BUILD_DIR) && cmake .. $(NO_PROMPT)
+	@ cd $(BUILD_DIR) && cmake --build . --parallel $(NO_PROMPT)
+	@ echo "${GREEN}CMake: ${NO_COLOR}Build files generated successfully";
+	@ $(CMAKE_OUTPUT)
 
 filesystem:	
 	@ if [ ! -d $(SRC_DIR) ]; then \
@@ -56,16 +69,22 @@ filesystem:
 	fi
 	@ if [ ! -f $(MAIN) ]; then \
 		touch $(MAIN); \
+		echo "#include <iostream>\n\nint main(){\n\tstd::cout << \"Hello, World!\" << std::endl;\n\treturn 0;\n}" > $(MAIN); \
 		echo "${GREEN}Filesystem: ${NO_COLOR}Main file created"; \
+	fi
+	@ if [ ! -f $(CMAKE_LISTS) ]; then \
+		touch $(CMAKE_LISTS); \
+		echo "cmake_minimum_required(VERSION $(CMAKE_MIN_VERSION))\nproject($(PROG_NAME) VERSION $(PROG_VERSION))\n\nadd_executable($(PROG_NAME) $(MAIN))" > $(CMAKE_LISTS) ; \
+		echo "${GREEN}Filesystem: ${NO_COLOR}CMake file created"; \
 	fi
 	@ if [ ! -f $(README) ]; then \
 		basename "`pwd`" | sed -E "s/_/ /g; s/^(.)/# \U\1/" > $(README); \
 		echo "${GREEN}Filesystem: ${NO_COLOR}README file created"; \
 	fi
-
+	
 includes:
 	@ find $(SRC_DIR) -name "*.h" -type f -exec ln -sf "{}" $(INCLUDE_DIR) \;
-	
+
 clean:
 	@ rm -r $(BUILD_DIR)/*
 	@ echo "${GREEN}Cleaner: ${NO_COLOR}Binaries cleaned"

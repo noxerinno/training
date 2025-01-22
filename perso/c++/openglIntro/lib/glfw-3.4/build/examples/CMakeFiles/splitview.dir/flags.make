@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/frantz/Documents/dev/training/perso/c++/openglIntro/lib/glfw-3.4/deps -I/home/frantz/Documents/dev/training/perso/c++/openglIntro/lib/glfw-3.4/include
 
-C_FLAGS = -std=gnu99
+C_FLAGS = -O3 -DNDEBUG -std=gnu99
 
