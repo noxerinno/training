@@ -37,8 +37,8 @@ NO_PROMPT = $(NO_STDOUT) $(NO_STDERR)
 all: filesystem
 	@ #$(CC) $(FLAGS) $(MAIN) $(MODULES) -o $(OUTPUT)
 	@ #$(OUTPUT)
-	@ cd $(BUILD_DIR) && cmake .. $(NO_PROMPT)
-	@ cd $(BUILD_DIR) && cmake --build . --parallel $(NO_PROMPT)
+	@ cd $(BUILD_DIR) && cmake .. $(NO_STDOUT)
+	@ cd $(BUILD_DIR) && cmake --build . --parallel $(NO_STDOUT)
 	@ echo "${GREEN}CMake: ${NO_COLOR}Build files generated successfully";
 	@ $(CMAKE_OUTPUT)
 
