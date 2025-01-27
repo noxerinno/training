@@ -26,7 +26,18 @@ sudo make install
 cd ../../../
 ```
 
+### GLEW
 
+To install GLEW, run this command :
+```
+sudo apt install libglew-dev
+```
+
+If you want to verify your GLEW installation, you can run this :
+```
+sudo apt install glew-utils
+glewinfo | grep "OpenGL version"
+```
 
 ## Build
 

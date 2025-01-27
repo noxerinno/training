@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/my_prog.dir/src/Main.cpp.o -o my_prog  /usr/local/lib/libglfw3.a -lGL -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl 
+/usr/bin/c++ -rdynamic CMakeFiles/my_prog.dir/src/Main.cpp.o -o my_prog  -lGLEW -lGL /usr/local/lib/libglfw3.a -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl 

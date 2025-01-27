@@ -1,6 +1,10 @@
+#include <GL/glew.h>
 #include <GL/gl.h>
 #include <GL/glext.h>
 #include <GLFW/glfw3.h>
+
+#include <iostream>
+#include <ostream>
 
 int main(void)
 {
@@ -20,6 +24,21 @@ int main(void)
 
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
+    
+    /* Print OpenGl version*/
+    std::cout << glGetString(GL_VERSION) << std::endl;
+
+    /* Buffer data and spec to draw a triangle*/
+    float positions[6] = {
+        -0.5f, -0.5f,
+         0.0f,  0.5f,
+         0.5f, -0.5f,
+    };
+
+    unsigned int buffer;
+    glGenBuffers(1, &buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -32,6 +51,8 @@ int main(void)
         glVertex2f(0.0f, 0.5f);
         glVertex2f(0.5f, -0.5f);
         glEnd();
+
+        // glDrawArrays(GL_TRIANGLES, 0, 3);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);

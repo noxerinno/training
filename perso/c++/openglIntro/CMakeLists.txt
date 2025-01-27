@@ -12,4 +12,4 @@ find_package(GLFW3 REQUIRED)
 add_executable(my_prog ./src/Main.cpp)
 
 # Lier GLFW et les bibliothèques OpenGL
-target_link_libraries(my_prog glfw GL)
+target_link_libraries(my_prog GLEW GL glfw)
