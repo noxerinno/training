@@ -65,7 +65,14 @@ int main(void) {
 
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
-    
+   
+    /* Initialize GLEW */
+    glewExperimental = GL_TRUE;  // Permet d'utiliser les extensions modernes
+    if (glewInit() != GLEW_OK) {
+        std::cerr << "Erreur lors de l'initialisation de GLEW" << std::endl;
+        return -1;
+    }
+
     /* Print OpenGl version*/
     std::cout << glGetString(GL_VERSION) << std::endl;
 
@@ -80,9 +87,31 @@ int main(void) {
     glGenBuffers(1, &buffer);                                                       // Create buffer
     glBindBuffer(GL_ARRAY_BUFFER, buffer);                                          // "Select" my buffer as the current buffer
     glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);    // Add my vertices' data to the buffer
-    
+
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);           // Describe my vertices' attribute
+
+    /* Writing shader source */
+    std::string vertexShader = 
+        "#version 460 core\n"
+        "\n"
+        "layout(location = 0) in vec4 position;"
+        "\n"
+        "void main() {\n"
+        " gl_Position = position;\n"
+        "}\n";
+
+     std::string fragmentShader = 
+        "#version 460 core\n"
+        "\n"
+        "layout(location = 0) out vec4 color;"
+        "\n"
+        "void main() {\n"
+        " color = vec4(1.0, 0.0, 0.0, 1.0);\n"
+        "}\n";
+
+    unsigned int shader = CreateShader(vertexShader, fragmentShader);   // Call to create function from shader source
+    glUseProgram(shader);                                               // Bind shader
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window)) {
