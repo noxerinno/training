@@ -1,2 +1,2 @@
-# training
+# Training
 My training reporitory
