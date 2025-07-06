@@ -11,7 +11,7 @@ bool IsSubsequence::isSubsequence(string s, string t) {
 
     // uint previousPos = 0;
 
-    for(char& c : s) {
+    for (char& c : s) {
         auto posInStringT = t.find(c);
         
         if (posInStringT == string::npos) {
