@@ -7,7 +7,8 @@
 //#include "romanToInteger/RomanToInteger.h"
 // #include "isSubsequence/IsSubsequence.h"
 // #include "bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.h"
-#include "longestCommonPrefix/LongestCommonPrefix.h"
+// #include "longestCommonPrefix/LongestCommonPrefix.h"
+#include "summaryRanges/SummaryRanges.h"
 
 using namespace std;
 
@@ -62,12 +63,27 @@ int main()
 
 
     //LONGEST COMMON PREFIX
-    LongestCommonPrefix lcp;
+    /*LongestCommonPrefix lcp;
 
     vector<string> strs = {"testabc", "testcde", "testabc", "ggo"};
     string prefix = lcp.longestCommonPrefix(strs); 
 
-    cout << "Longest common prefix : " << prefix;
+    cout << "Longest common prefix : " << prefix;*/
+
+
+    //SUMMARY RANGES
+    SummaryRanges sr;
+
+    // vector<int> nums = {};
+    // vector<int> nums = {5};
+    // vector<int> nums = {1,2,3,4,6,8,9};
+    vector<int> nums = {1,2,3,4,6,8};
+
+    vector<string> summaryRanges = sr.summaryRanges(nums);
+
+    for (string range : summaryRanges) {
+        cout << "\"" << range << "\", ";
+    }
 
 	return 0;
 }

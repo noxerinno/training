@@ -10,7 +10,8 @@ MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp \
 			$(SRC_DIR)/romanToInteger/RomanToInteger.cpp \
 			$(SRC_DIR)/isSubsequence/IsSubsequence.cpp \
 			$(SRC_DIR)/bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.cpp \
-			$(SRC_DIR)/longestCommonPrefix/LongestCommonPrefix.cpp 
+			$(SRC_DIR)/longestCommonPrefix/LongestCommonPrefix.cpp \
+			$(SRC_DIR)/summaryRanges/SummaryRanges.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
