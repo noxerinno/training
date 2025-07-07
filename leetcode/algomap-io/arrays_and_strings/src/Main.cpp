@@ -8,7 +8,8 @@
 // #include "isSubsequence/IsSubsequence.h"
 // #include "bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.h"
 // #include "longestCommonPrefix/LongestCommonPrefix.h"
-#include "summaryRanges/SummaryRanges.h"
+// #include "summaryRanges/SummaryRanges.h"
+#include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.h"
 
 using namespace std;
 
@@ -72,7 +73,7 @@ int main()
 
 
     //SUMMARY RANGES
-    SummaryRanges sr;
+    /*SummaryRanges sr;
 
     // vector<int> nums = {};
     // vector<int> nums = {5};
@@ -83,6 +84,20 @@ int main()
 
     for (string range : summaryRanges) {
         cout << "\"" << range << "\", ";
+    }*/
+
+
+    //PRODUCT OF ARRAY EXCEPT SELF
+    ProductOfArrayExceptSelf poaes;
+
+    // vector<int> nums;
+    // vector<int> nums = {4};
+    vector<int> nums = {1, 2, 3, 4};
+
+    vector<int> result = poaes.productExceptSelf(nums);
+
+    for (int value: result) {
+        cout << value << ' ';
     }
 
 	return 0;
