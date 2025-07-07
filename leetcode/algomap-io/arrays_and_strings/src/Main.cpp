@@ -2,14 +2,14 @@
 #include <string>
 #include <vector>
 
-//#include "closestToZero/ClosestToZero.h"
-//#include "mergeStringsAlternately/MergeStringsAlternately.h"
-//#include "romanToInteger/RomanToInteger.h"
-// #include "isSubsequence/IsSubsequence.h"
-// #include "bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.h"
-// #include "longestCommonPrefix/LongestCommonPrefix.h"
-// #include "summaryRanges/SummaryRanges.h"
-#include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.h"
+//#include "closestToZero/ClosestToZero.hpp"
+//#include "mergeStringsAlternately/MergeStringsAlternately.hpp"
+//#include "romanToInteger/RomanToInteger.hpp"
+// #include "isSubsequence/IsSubsequence.hpp"
+// #include "bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.hpp"
+// #include "longestCommonPrefix/LongestCommonPrefix.hpp"
+// #include "summaryRanges/SummaryRanges.hpp"
+#include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
 
 using namespace std;
 

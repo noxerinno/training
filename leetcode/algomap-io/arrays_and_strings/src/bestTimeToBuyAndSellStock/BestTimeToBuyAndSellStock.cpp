@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <iostream>
 
-#include "BestTimeToBuyAndSellStock.h"
+#include "BestTimeToBuyAndSellStock.hpp"
 
 using namespace std;
 

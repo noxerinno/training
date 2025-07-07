@@ -1,4 +1,4 @@
-#include "IsSubsequence.h"
+#include "IsSubsequence.hpp"
 
 using namespace std;
 

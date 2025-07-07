@@ -1,4 +1,4 @@
-#include "ProductOfArrayExceptSelf.h"
+#include "ProductOfArrayExceptSelf.hpp"
 
 using namespace std;
 

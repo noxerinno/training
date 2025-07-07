@@ -1,6 +1,6 @@
 #include <algorithm>
 
-#include "LongestCommonPrefix.h"
+#include "LongestCommonPrefix.hpp"
 
 using namespace std;
 

@@ -71,7 +71,7 @@ filesystem:
 	fi
 
 includes:
-	@ find $(SRC_DIR) -name "*.h" -type f -exec ln -sf "{}" $(INCLUDE_DIR) \;
+	@ find $(SRC_DIR) -name "*.hpp" -type f -exec ln -sf "{}" $(INCLUDE_DIR) \;
 	
 clean:
 	@ rm -r $(BUILD_DIR)/*

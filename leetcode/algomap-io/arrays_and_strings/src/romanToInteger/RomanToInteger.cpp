@@ -2,7 +2,7 @@
 #include <map>
 #include <string>
 
-#include "RomanToInteger.h"
+#include "RomanToInteger.hpp"
 
 using namespace std;
 

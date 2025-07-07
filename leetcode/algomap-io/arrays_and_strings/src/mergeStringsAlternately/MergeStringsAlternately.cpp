@@ -1,7 +1,7 @@
 #include <cstddef>
 #include <string>
 
-#include "MergeStringsAlternately.h"
+#include "MergeStringsAlternately.hpp"
 
 using namespace std;
 

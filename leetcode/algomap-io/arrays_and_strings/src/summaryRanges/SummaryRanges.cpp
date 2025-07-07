@@ -1,4 +1,4 @@
-#include "SummaryRanges.h"
+#include "SummaryRanges.hpp"
 
 using namespace std;
 
