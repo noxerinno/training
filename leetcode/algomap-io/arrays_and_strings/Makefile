@@ -5,7 +5,12 @@ FLAGS = -Wall -Wextra -std=c++14 -pedantic
 
 # Directories
 SRC_DIR = ./src
-MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp $(SRC_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp $(SRC_DIR)/romanToInteger/RomanToInteger.cpp $(SRC_DIR)/isSubsequence/IsSubsequence.cpp $(SRC_DIR)/bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.cpp 
+MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp \
+			$(SRC_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp \
+			$(SRC_DIR)/romanToInteger/RomanToInteger.cpp \
+			$(SRC_DIR)/isSubsequence/IsSubsequence.cpp \
+			$(SRC_DIR)/bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.cpp \
+			$(SRC_DIR)/longestCommonPrefix/LongestCommonPrefix.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
