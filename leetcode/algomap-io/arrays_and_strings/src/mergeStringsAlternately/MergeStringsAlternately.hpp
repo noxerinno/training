@@ -1,5 +1,5 @@
-#ifndef MERGESTRINGSALTERNATELY_H
-#define MERGESTRINGSALTERNATELY_H
+#ifndef MERGESTRINGSALTERNATELY_HPP
+#define MERGESTRINGSALTERNATELY_HPP
 
 #include <cstddef>
 #include <string>
@@ -15,4 +15,4 @@ private:
 protected:
 };
 
-#endif // !MERGESTRINGSALTERNATELY_H
+#endif // !MERGESTRINGSALTERNATELY_HPP

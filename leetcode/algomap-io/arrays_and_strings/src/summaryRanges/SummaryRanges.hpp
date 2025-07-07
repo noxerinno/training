@@ -1,5 +1,5 @@
-#ifndef SUMMARYRANGES_H
-#define SUMMARYRANGES_H
+#ifndef SUMMARYRANGES_HPP
+#define SUMMARYRANGES_HPP
 
 #include <vector>
 #include <string>
@@ -13,4 +13,4 @@ private:
     std::string createRangeString(int rangeLowestValue, int rangeHighestValue);
 };
 
-#endif  // SUMMARYRANGES_H
+#endif  // SUMMARYRANGES_HPP

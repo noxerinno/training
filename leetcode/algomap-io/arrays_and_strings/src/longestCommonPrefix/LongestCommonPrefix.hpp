@@ -1,5 +1,5 @@
-#ifndef LONGESTCOMMONPREFIX_H
-#define LONGESTCOMMONPREFIX_H
+#ifndef LONGESTCOMMONPREFIX_HPP
+#define LONGESTCOMMONPREFIX_HPP
 
 #include <string>
 #include <vector>
@@ -12,4 +12,4 @@ public:
 };
 
 
-#endif  // LONGESTCOMMONPREFIX_H
+#endif  // LONGESTCOMMONPREFIX_HPP

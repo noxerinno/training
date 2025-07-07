@@ -1,5 +1,5 @@
-#ifndef ISSUBSEQUENCE_H
-#define ISSUBSEQUENCE_H
+#ifndef ISSUBSEQUENCE_HPP
+#define ISSUBSEQUENCE_HPP
 
 #include <string>
 
@@ -9,4 +9,4 @@ public:
     bool isSubsequence(std::string s, std::string t);
 };
 
-#endif  // ISSUBSEQUENCE_H
+#endif  // ISSUBSEQUENCE_HPP

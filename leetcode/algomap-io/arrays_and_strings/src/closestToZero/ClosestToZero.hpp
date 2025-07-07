@@ -1,5 +1,5 @@
-#ifndef CLOSESTTOZERO_H
-#define CLOSESTTOZERO_H
+#ifndef CLOSESTTOZERO_HPP
+#define CLOSESTTOZERO_HPP
 
 #include <vector>
 

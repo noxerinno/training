@@ -1,5 +1,5 @@
-#ifndef ROMANTOINTEGERBESTSOLUTION_H
-#define ROMANTOINTEGERBESTSOLUTION_H
+#ifndef ROMANTOINTEGERBESTSOLUTION_HPP
+#define ROMANTOINTEGERBESTSOLUTION_HPP
 
 #include <map>
 #include <string>
@@ -16,4 +16,4 @@ private:
 protected:
 };
 
-#endif // !ROMANTOINT_H
+#endif // !ROMANTOINT_HPP

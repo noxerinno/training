@@ -1,5 +1,5 @@
-#ifndef ROMANTOINTEGER_H
-#define ROMANTOINTEGER_H
+#ifndef ROMANTOINTEGER_HPP
+#define ROMANTOINTEGER_HPP
 
 #include <map>
 #include <string>
@@ -16,4 +16,4 @@ private:
 protected:
 };
 
-#endif // !ROMANTOINT_H
+#endif // !ROMANTOINT_HPP

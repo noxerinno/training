@@ -1,5 +1,5 @@
-#ifndef BESTTIMETOBUYANDSELLSTOCK_H
-#define BESTTIMETOBUYANDSELLSTOCK_H
+#ifndef BESTTIMETOBUYANDSELLSTOCK_HPP
+#define BESTTIMETOBUYANDSELLSTOCK_HPP
 
 #include <vector>
 
@@ -12,4 +12,4 @@ private:
     static bool decreasingOrderComparator(int a, int b);
 };
 
-#endif  // BESTTIMETOBUYANDSELLSTOCK_H
+#endif  // BESTTIMETOBUYANDSELLSTOCK_HPP
