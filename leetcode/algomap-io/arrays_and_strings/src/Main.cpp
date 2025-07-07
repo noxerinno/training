@@ -9,7 +9,8 @@
 // #include "bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.hpp"
 // #include "longestCommonPrefix/LongestCommonPrefix.hpp"
 // #include "summaryRanges/SummaryRanges.hpp"
-#include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
+// #include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
+#include "mergeIntervals/MergeIntervals.hpp"
 
 using namespace std;
 
@@ -88,7 +89,7 @@ int main()
 
 
     //PRODUCT OF ARRAY EXCEPT SELF
-    ProductOfArrayExceptSelf poaes;
+    /*ProductOfArrayExceptSelf poaes;
 
     // vector<int> nums;
     // vector<int> nums = {4};
@@ -98,6 +99,25 @@ int main()
 
     for (int value: result) {
         cout << value << ' ';
+    }*/
+
+
+    // MERGE INTERVALS
+    MergeIntervals mi;
+
+    // vector<vector<int>> intervals;
+    // vector<vector<int>> intervals = {{5,10}};
+    // vector<vector<int>> intervals = {{1,3}, {2,6}, {8,10}, {15,18}};
+    vector<vector<int>> intervals = {{1,3}, {2,5}, {11,13}, {10,15}, {20,25}, {21, 24}, {50,55}, {55,100}, {1000, 10001}};
+
+    vector<vector<int>> mergedIntervals = mi.merge(intervals);
+
+    for (vector<int> interval : mergedIntervals) {
+        if (!interval.empty()) {
+            cout << '[' << interval[0] << ',' << interval[1] << "] ";
+        } else {
+            cout << "empty ";
+        }
     }
 
 	return 0;
