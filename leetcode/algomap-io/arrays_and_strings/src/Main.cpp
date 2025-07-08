@@ -10,7 +10,8 @@
 // #include "longestCommonPrefix/LongestCommonPrefix.hpp"
 // #include "summaryRanges/SummaryRanges.hpp"
 // #include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
-#include "mergeIntervals/MergeIntervals.hpp"
+// #include "mergeIntervals/MergeIntervals.hpp"
+#include "spiralMatrix/SpiralMatrix.hpp"
 
 using namespace std;
 
@@ -103,7 +104,7 @@ int main()
 
 
     // MERGE INTERVALS
-    MergeIntervals mi;
+    /*MergeIntervals mi;
 
     // vector<vector<int>> intervals;
     // vector<vector<int>> intervals = {{5,10}};
@@ -118,6 +119,23 @@ int main()
         } else {
             cout << "empty ";
         }
+    }*/
+
+
+    // SPIRAL MATRIX
+    SpiralMatrix sm;
+
+    // vector<vector<int>> matrix;
+    // vector<vector<int>> matrix = {{1,2,3}};
+    // vector<vector<int>> matrix = {{1},{2},{3}};
+    // vector<vector<int>> matrix = {{1,2,3},{4,5,6},{7,8,9}};
+    vector<vector<int>> matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+    // vector<vector<int>> matrix = {{2,5,8},{4,0,-1}};
+
+    vector<int> spiralMatrix = sm.spiralOrder(matrix);
+
+    for (int num : spiralMatrix) {
+        cout << num << ' ';
     }
 
 	return 0;

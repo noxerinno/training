@@ -13,7 +13,8 @@ MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp \
 			$(SRC_DIR)/longestCommonPrefix/LongestCommonPrefix.cpp \
 			$(SRC_DIR)/summaryRanges/SummaryRanges.cpp \
 			$(SRC_DIR)/productOfArrayExceptSelf/ProductOfArrayExceptSelf.cpp \
-			$(SRC_DIR)/mergeIntervals/MergeIntervals.cpp 
+			$(SRC_DIR)/mergeIntervals/MergeIntervals.cpp \
+			$(SRC_DIR)/spiralMatrix/SpiralMatrix.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
