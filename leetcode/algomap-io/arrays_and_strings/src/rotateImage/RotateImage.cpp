@@ -34,7 +34,6 @@ void RotateImage::rotate(vector<vector<int>>& matrix) {
             matrix[i][j] = matrix[i][j] - matrix[i][matrixSize-1-j];
         }
     }
-
 }
 
 void RotateImage::printMatrix(vector<vector<int>>& matrix) {
