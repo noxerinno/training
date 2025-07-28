@@ -11,7 +11,8 @@
 // #include "summaryRanges/SummaryRanges.hpp"
 // #include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
 // #include "mergeIntervals/MergeIntervals.hpp"
-#include "spiralMatrix/SpiralMatrix.hpp"
+// #include "spiralMatrix/SpiralMatrix.hpp"
+#include "rotateImage/RotateImage.hpp"
 
 using namespace std;
 
@@ -123,7 +124,7 @@ int main()
 
 
     // SPIRAL MATRIX
-    SpiralMatrix sm;
+    /*SpiralMatrix sm;
 
     // vector<vector<int>> matrix;
     // vector<vector<int>> matrix = {{1,2,3}};
@@ -136,7 +137,20 @@ int main()
 
     for (int num : spiralMatrix) {
         cout << num << ' ';
-    }
+    }*/
+
+
+    // ROTATE IMAGE
+    RotateImage ri;
+
+    // vector<vector<int>> matrix;
+    // vector<vector<int>> matrix = {{1,2},{3,4}};
+    // vector<vector<int>> matrix = {{1,2,3},{4,5,6},{7,8,9}};
+    vector<vector<int>> matrix = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};
+
+    ri.printMatrix(matrix);
+    ri.rotate(matrix);
+    ri.printMatrix(matrix);
 
 	return 0;
 }
