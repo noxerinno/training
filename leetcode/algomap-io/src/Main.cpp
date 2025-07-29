@@ -2,17 +2,17 @@
 #include <string>
 #include <vector>
 
-//#include "closestToZero/ClosestToZero.hpp"
-//#include "mergeStringsAlternately/MergeStringsAlternately.hpp"
-//#include "romanToInteger/RomanToInteger.hpp"
-// #include "isSubsequence/IsSubsequence.hpp"
-// #include "bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.hpp"
-// #include "longestCommonPrefix/LongestCommonPrefix.hpp"
-// #include "summaryRanges/SummaryRanges.hpp"
-// #include "productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
-// #include "mergeIntervals/MergeIntervals.hpp"
-// #include "spiralMatrix/SpiralMatrix.hpp"
-#include "rotateImage/RotateImage.hpp"
+//#include "arraysAndStrings/closestToZero/ClosestToZero.hpp"
+//#include "arraysAndStrings/mergeStringsAlternately/MergeStringsAlternately.hpp"
+//#include "arraysAndStrings/romanToInteger/RomanToInteger.hpp"
+// #include "arraysAndStrings/isSubsequence/IsSubsequence.hpp"
+// #include "arraysAndStrings/bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.hpp"
+// #include "arraysAndStrings/longestCommonPrefix/LongestCommonPrefix.hpp"
+// #include "arraysAndStrings/summaryRanges/SummaryRanges.hpp"
+// #include "arraysAndStrings/productOfArrayExceptSelf/ProductOfArrayExceptSelf.hpp"
+// #include "arraysAndStrings/mergeIntervals/MergeIntervals.hpp"
+// #include "arraysAndStrings/spiralMatrix/SpiralMatrix.hpp"
+// #include "arraysAndStrings/rotateImage/RotateImage.hpp"
 
 using namespace std;
 
@@ -141,7 +141,7 @@ int main()
 
 
     // ROTATE IMAGE
-    RotateImage ri;
+    /*RotateImage ri;
 
     // vector<vector<int>> matrix;
     // vector<vector<int>> matrix = {{1,2},{3,4}};
@@ -150,7 +150,7 @@ int main()
 
     ri.printMatrix(matrix);
     ri.rotate(matrix);
-    ri.printMatrix(matrix);
+    ri.printMatrix(matrix);*/
 
 	return 0;
 }

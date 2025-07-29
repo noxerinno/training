@@ -3,19 +3,34 @@
 CC = g++
 FLAGS = -Wall -Wextra -std=c++14 -pedantic
 
+# Algomap chapters
+AAS_DIR = arraysAndStrings
+HAS_DIR = hashmapsAndSets
+TP_DIR = twoPointers
+S_DIR = stacks
+LL_DIR = linkedList
+BS_DIR = binarySearch
+SW_DIR = slidingWindow
+T_DIR = trees
+H_DIR = heaps
+RB_DIR = recursiveBacktracking
+G_DIR = graphs
+DP_DIR = dynamicProgramming
+
 # Directories
 SRC_DIR = ./src
-MODULES = $(SRC_DIR)/closestToZero/ClosestToZero.cpp \
-			$(SRC_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp \
-			$(SRC_DIR)/romanToInteger/RomanToInteger.cpp \
-			$(SRC_DIR)/isSubsequence/IsSubsequence.cpp \
-			$(SRC_DIR)/bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.cpp \
-			$(SRC_DIR)/longestCommonPrefix/LongestCommonPrefix.cpp \
-			$(SRC_DIR)/summaryRanges/SummaryRanges.cpp \
-			$(SRC_DIR)/productOfArrayExceptSelf/ProductOfArrayExceptSelf.cpp \
-			$(SRC_DIR)/mergeIntervals/MergeIntervals.cpp \
-			$(SRC_DIR)/spiralMatrix/SpiralMatrix.cpp \
-			$(SRC_DIR)/rotateImage/RotateImage.cpp
+# MODULES = $(SRC_DIR)/$(AAS_DIR)/closestToZero/ClosestToZero.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/mergeStringsAlternately/MergeStringsAlternately.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/romanToInteger/RomanToInteger.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/isSubsequence/IsSubsequence.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/bestTimeToBuyAndSellStock/BestTimeToBuyAndSellStock.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/longestCommonPrefix/LongestCommonPrefix.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/summaryRanges/SummaryRanges.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/productOfArrayExceptSelf/ProductOfArrayExceptSelf.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/mergeIntervals/MergeIntervals.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/spiralMatrix/SpiralMatrix.cpp \
+# 			$(SRC_DIR)/$(AAS_DIR)/rotateImage/RotateImage.cpp
+MODULES = $(SRC_DIR)/$(HAS_DIR)/closestToZero/ClosestToZero.cpp
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
