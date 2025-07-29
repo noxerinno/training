@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-#include "fibonacci/Fibonacci.h"
+#include "fibonacci/Fibonacci.hpp"
 
 using namespace std;
 
