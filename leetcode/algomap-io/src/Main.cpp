@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+// CHAPTER 1 : Arrays and strings
+
 //#include "arraysAndStrings/closestToZero/ClosestToZero.hpp"
 //#include "arraysAndStrings/mergeStringsAlternately/MergeStringsAlternately.hpp"
 //#include "arraysAndStrings/romanToInteger/RomanToInteger.hpp"
@@ -13,6 +15,11 @@
 // #include "arraysAndStrings/mergeIntervals/MergeIntervals.hpp"
 // #include "arraysAndStrings/spiralMatrix/SpiralMatrix.hpp"
 // #include "arraysAndStrings/rotateImage/RotateImage.hpp"
+
+
+// CHAPTER 2 : Hashmaps and sets
+
+#include "hashmapsAndSets/jewelsAndStones/JewelsAndStones.hpp"
 
 using namespace std;
 
@@ -151,6 +158,13 @@ int main()
     ri.printMatrix(matrix);
     ri.rotate(matrix);
     ri.printMatrix(matrix);*/
+
+
+
+    // JEWELS AND STONES
+    JewelsAndStones jas;
+
+    cout << jas.numJewelsAndStones("aA", "aAAbbbb") << endl;
 
 	return 0;
 }
