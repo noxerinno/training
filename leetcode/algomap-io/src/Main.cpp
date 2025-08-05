@@ -20,7 +20,8 @@
 // CHAPTER 2 : Hashmaps and sets
 
 // #include "hashmapsAndSets/jewelsAndStones/JewelsAndStones.hpp"
-#include "hashmapsAndSets/containsDuplicate/ContainsDuplicate.hpp"
+// #include "hashmapsAndSets/containsDuplicate/ContainsDuplicate.hpp"
+#include "hashmapsAndSets/ransomNote/RansomNote.hpp"
 
 using namespace std;
 
@@ -168,7 +169,7 @@ int main()
     cout << jas.numJewelsAndStones("aA", "aAAbbbb") << endl;*/
 
     // CONTAINS DUPLICATES
-    ContainsDuplicate cd;
+    /*ContainsDuplicate cd;
 
     // vector<int> nums;
     // vector<int> nums = {1, 3, 4, 513};
@@ -178,6 +179,18 @@ int main()
         cout << "Contains duplicates" << endl;
     } else {
         cout << "No duplicates" << endl;
+    }*/
+
+    // RANSOM NOTE
+    RansomNote rn;
+
+    string ransomNote = "aa";
+    string magazine = "aab";
+
+    if (rn.canConstruct(ransomNote, magazine)) {
+        cout << "Can construct" << endl;
+    } else {
+        cout << "Cannot construct" << endl;
     }
 
 	return 0;
