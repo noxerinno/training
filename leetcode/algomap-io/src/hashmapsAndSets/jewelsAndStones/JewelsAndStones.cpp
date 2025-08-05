@@ -9,7 +9,7 @@ JewelsAndStones::JewelsAndStones() {}
 int JewelsAndStones::numJewelsAndStones(string jewels, string stones) {
     int numOfJewels = 0;
 
-    if (stones.empty()) {
+    if (jewels.empty() || stones.empty()) {
         return numOfJewels;
     }
 
