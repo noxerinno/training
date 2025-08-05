@@ -19,7 +19,8 @@
 
 // CHAPTER 2 : Hashmaps and sets
 
-#include "hashmapsAndSets/jewelsAndStones/JewelsAndStones.hpp"
+// #include "hashmapsAndSets/jewelsAndStones/JewelsAndStones.hpp"
+#include "hashmapsAndSets/containsDuplicate/ContainsDuplicate.hpp"
 
 using namespace std;
 
@@ -162,9 +163,22 @@ int main()
 
 
     // JEWELS AND STONES
-    JewelsAndStones jas;
+    /*JewelsAndStones jas;
 
-    cout << jas.numJewelsAndStones("aA", "aAAbbbb") << endl;
+    cout << jas.numJewelsAndStones("aA", "aAAbbbb") << endl;*/
+
+    // CONTAINS DUPLICATES
+    ContainsDuplicate cd;
+
+    // vector<int> nums;
+    // vector<int> nums = {1, 3, 4, 513};
+    vector<int> nums = {1, 1, 2, 5};
+
+    if (cd.containsDuplicate(nums)) {
+        cout << "Contains duplicates" << endl;
+    } else {
+        cout << "No duplicates" << endl;
+    }
 
 	return 0;
 }
