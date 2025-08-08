@@ -32,7 +32,8 @@ SRC_DIR = ./src
 # 			$(SRC_DIR)/$(AAS_DIR)/rotateImage/RotateImage.cpp
 MODULES = $(SRC_DIR)/$(HAS_DIR)/jewelsAndStones/JewelsAndStones.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/containsDuplicate/ContainsDuplicate.cpp \
-			$(SRC_DIR)/$(HAS_DIR)/ransomNote/RansomNote.cpp
+			$(SRC_DIR)/$(HAS_DIR)/ransomNote/RansomNote.cpp \
+			$(SRC_DIR)/$(HAS_DIR)/validAnagram/ValidAnagram.cpp
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include

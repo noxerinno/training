@@ -21,7 +21,8 @@
 
 // #include "hashmapsAndSets/jewelsAndStones/JewelsAndStones.hpp"
 // #include "hashmapsAndSets/containsDuplicate/ContainsDuplicate.hpp"
-#include "hashmapsAndSets/ransomNote/RansomNote.hpp"
+// #include "hashmapsAndSets/ransomNote/RansomNote.hpp"
+#include "hashmapsAndSets/validAnagram/ValidAnagram.hpp"
 
 using namespace std;
 
@@ -182,7 +183,7 @@ int main()
     }*/
 
     // RANSOM NOTE
-    RansomNote rn;
+    /*RansomNote rn;
 
     string ransomNote = "aa";
     string magazine = "aab";
@@ -191,6 +192,28 @@ int main()
         cout << "Can construct" << endl;
     } else {
         cout << "Cannot construct" << endl;
+    }*/
+
+
+    // VALID ANAGRAM
+    // string a = "test";
+    // string b = "test";
+
+    // if (a == b) {
+    //     cout << "Same string";
+    // } else {
+    //     cout << "Nope, not the same";
+    // }
+
+    ValidAnagram va;
+
+    string s = "anagram";
+    string t = "nagaram";
+
+    if (va.isAnagram(s, t)) {
+        cout << "It's an anagram" << endl;
+    } else {
+        cout << "Nope, not an anagram" << endl;
     }
 
 	return 0;
