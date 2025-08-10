@@ -31,12 +31,6 @@ int MaximumNumberOfBalloons::maxNumberOfBallons(string text) {
     balloonMap['l'] = balloonMap['l']/2;
     balloonMap['o'] = balloonMap['o']/2;
 
-    // DEBUG
-    // TODO : DON'T FORGET TO DELETE & IOSTREAM INCLUDE
-    for (auto [key, value] : balloonMap) {
-        cout << "Key : " << key << " - Value : " << value << endl;
-    }
-
     auto minIt = min_element(
         balloonMap.begin(),
         balloonMap.end(),
