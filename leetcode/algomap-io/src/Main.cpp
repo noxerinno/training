@@ -23,7 +23,8 @@
 // #include "hashmapsAndSets/containsDuplicate/ContainsDuplicate.hpp"
 // #include "hashmapsAndSets/ransomNote/RansomNote.hpp"
 // #include "hashmapsAndSets/validAnagram/ValidAnagram.hpp"
-#include "hashmapsAndSets/maximumNumberOfBalloons/MaximumNumberOfBalloons.hpp"
+// #include "hashmapsAndSets/maximumNumberOfBalloons/MaximumNumberOfBalloons.hpp"
+#include "hashmapsAndSets/twoSum/TwoSum.hpp"
 
 using namespace std;
 
@@ -228,7 +229,7 @@ int main()
 
     cout << 7/2;*/
 
-    MaximumNumberOfBalloons mnob;
+    /*MaximumNumberOfBalloons mnob;
 
     // string text;
     // string text = "nlaebolko";
@@ -236,7 +237,36 @@ int main()
     // string text = "leetcode";
     string text = "nllbblooon";
 
-    cout << mnob.maxNumberOfBallons(text) << endl;
+    cout << mnob.maxNumberOfBallons(text) << endl;*/
+
+
+    // TWO SUM
+    TwoSum ts;
+
+    // vector<int> nums = {2,7,11,15};
+    // int target = 9;
+
+    // vector<int> nums = {3,2,4};
+    // int target = 6;
+
+    // vector<int> nums = {3,3};
+    // int target = 6;
+
+    // vector<int> nums = {-1,-2,-3,-4,-5};
+    // int target = -8;
+
+    // vector<int> nums = {3,2,4};
+    // int target = 6;
+
+    // vector<int> nums = {0,4,3,0};
+    // int target = 0;
+
+    vector<int> nums = {-3,4,3,90};
+    int target = 0;
+
+    vector<int> result = ts.twoSum(nums, target);
+
+    cout << '[' << result[0] << ',' << result[1] << ']' << endl;
 
 	return 0;
 }

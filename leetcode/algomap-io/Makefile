@@ -34,7 +34,8 @@ MODULES = $(SRC_DIR)/$(HAS_DIR)/jewelsAndStones/JewelsAndStones.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/containsDuplicate/ContainsDuplicate.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/ransomNote/RansomNote.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/validAnagram/ValidAnagram.cpp \
-			$(SRC_DIR)/$(HAS_DIR)/maximumNumberOfBalloons/MaximumNumberOfBalloons.cpp 
+			$(SRC_DIR)/$(HAS_DIR)/maximumNumberOfBalloons/MaximumNumberOfBalloons.cpp \
+			$(SRC_DIR)/$(HAS_DIR)/twoSum/TwoSum.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
