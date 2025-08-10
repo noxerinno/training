@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <iostream>
 #include <unordered_map>
 
 #include "MaximumNumberOfBalloons.hpp"
@@ -27,20 +26,6 @@ int MaximumNumberOfBalloons::maxNumberOfBallons(string text) {
             balloonMap[ch]++;
         }
     }
-
-    balloonMap['l'] = balloonMap['l']/2;
-    balloonMap['o'] = balloonMap['o']/2;
-
-    auto minIt = min_element(
-        balloonMap.begin(),
-        balloonMap.end(),
-        [](const auto& a, const auto& b) {
-            return a.second < b.second;
-        });
-
-    if (minIt != balloonMap.end()) {
-        return minIt->second;
-    }
-
-    return 0;
+    
+    return min({balloonMap['b'], balloonMap['a'], balloonMap['l'] / 2, balloonMap['o'] / 2, balloonMap['n']});
 }
