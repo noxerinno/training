@@ -22,7 +22,8 @@
 // #include "hashmapsAndSets/jewelsAndStones/JewelsAndStones.hpp"
 // #include "hashmapsAndSets/containsDuplicate/ContainsDuplicate.hpp"
 // #include "hashmapsAndSets/ransomNote/RansomNote.hpp"
-#include "hashmapsAndSets/validAnagram/ValidAnagram.hpp"
+// #include "hashmapsAndSets/validAnagram/ValidAnagram.hpp"
+#include "hashmapsAndSets/maximumNumberOfBalloons/MaximumNumberOfBalloons.hpp"
 
 using namespace std;
 
@@ -196,16 +197,16 @@ int main()
 
 
     // VALID ANAGRAM
-    // string a = "test";
-    // string b = "test";
+    /*string a = "test";
+    string b = "test";
 
-    // if (a == b) {
-    //     cout << "Same string";
-    // } else {
-    //     cout << "Nope, not the same";
-    // }
+    if (a == b) {
+        cout << "Same string";
+    } else {
+        cout << "Nope, not the same";
+    }*/
 
-    ValidAnagram va;
+    /*ValidAnagram va;
 
     string s = "anagram";
     string t = "nagaram";
@@ -214,7 +215,28 @@ int main()
         cout << "It's an anagram" << endl;
     } else {
         cout << "Nope, not an anagram" << endl;
+    }*/
+
+
+    // MAXIMIM NUMBER OF BALLOONS
+    /*char ch = 'a';
+    string text = "test";
+    
+    if (text.find(ch) != string::npos) {
+        cout << "Letter '" << ch << "' in '" << text << "'" << endl;
     }
+
+    cout << 7/2;*/
+
+    MaximumNumberOfBalloons mnob;
+
+    // string text;
+    // string text = "nlaebolko";
+    // string text = "loonbalxballpoon";
+    // string text = "leetcode";
+    string text = "nllbblooon";
+
+    cout << mnob.maxNumberOfBallons(text) << endl;
 
 	return 0;
 }

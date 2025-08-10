@@ -1,7 +1,7 @@
 ###### Defining global vars ######
 # Compiler
 CC = g++
-FLAGS = -Wall -Wextra -std=c++14 -pedantic
+FLAGS = -Wall -Wextra -std=c++17 -pedantic
 
 # Algomap chapters
 AAS_DIR = arraysAndStrings
@@ -33,7 +33,8 @@ SRC_DIR = ./src
 MODULES = $(SRC_DIR)/$(HAS_DIR)/jewelsAndStones/JewelsAndStones.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/containsDuplicate/ContainsDuplicate.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/ransomNote/RansomNote.cpp \
-			$(SRC_DIR)/$(HAS_DIR)/validAnagram/ValidAnagram.cpp
+			$(SRC_DIR)/$(HAS_DIR)/validAnagram/ValidAnagram.cpp \
+			$(SRC_DIR)/$(HAS_DIR)/maximumNumberOfBalloons/MaximumNumberOfBalloons.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include
