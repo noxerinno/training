@@ -24,7 +24,8 @@
 // #include "hashmapsAndSets/ransomNote/RansomNote.hpp"
 // #include "hashmapsAndSets/validAnagram/ValidAnagram.hpp"
 // #include "hashmapsAndSets/maximumNumberOfBalloons/MaximumNumberOfBalloons.hpp"
-#include "hashmapsAndSets/twoSum/TwoSum.hpp"
+// #include "hashmapsAndSets/twoSum/TwoSum.hpp"
+#include "hashmapsAndSets/validSudoku/ValidSudoku.hpp"
 
 using namespace std;
 
@@ -241,7 +242,7 @@ int main()
 
 
     // TWO SUM
-    TwoSum ts;
+    /*TwoSum ts;
 
     // vector<int> nums = {2,7,11,15};
     // int target = 9;
@@ -266,7 +267,39 @@ int main()
 
     vector<int> result = ts.twoSum(nums, target);
 
-    cout << '[' << result[0] << ',' << result[1] << ']' << endl;
+    cout << '[' << result[0] << ',' << result[1] << ']' << endl;*/
+
+
+    // VALID SUDOKU
+    ValidSudoku vs;
+
+    // vector<vector<char>> grid = {{'5','3','.','.','7','.','.','.','.'},
+    //                             {'6','.','.','1','9','5','.','.','.'},
+    //                             {'.','9','8','.','.','.','.','6','.'},
+    //                             {'8','.','.','.','6','.','.','.','3'},
+    //                             {'4','.','.','8','.','3','.','.','1'},
+    //                             {'7','.','.','.','2','.','.','.','6'},
+    //                             {'.','6','.','.','.','.','2','8','.'},
+    //                             {'.','.','.','4','1','9','.','.','5'},
+    //                             {'.','.','.','.','8','.','.','7','9'}};
+
+    vector<vector<char>> grid = {{'8','3','.','.','7','.','.','.','.'},
+                                {'6','.','.','1','9','5','.','.','.'},
+                                {'.','9','8','.','.','.','.','6','.'},
+                                {'8','.','.','.','6','.','.','.','3'},
+                                {'4','.','.','8','.','3','.','.','1'},
+                                {'7','.','.','.','2','.','.','.','6'},
+                                {'.','6','.','.','.','.','2','8','.'},
+                                {'.','.','.','4','1','9','.','.','5'},
+                                {'.','.','.','.','8','.','.','7','9'}};
+
+    vs.displayBoard(grid);
+
+    if (vs.isValidSudoku(grid)) {
+        cout << endl << endl << "Valid grid" << endl;
+    } else {
+        cout << endl << endl << "Invalid grid" << endl;
+    }
 
 	return 0;
 }

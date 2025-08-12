@@ -67,7 +67,7 @@ vector<int> TwoSum::twoSum(vector<int>& nums, int target) {
         mappedNums[nums[i]] = i;
     }
 
-    for (int i = 0; i < nums.size(); i++) {
+    for (int i = 0; i < static_cast<int>(nums.size()); i++) {
         int delta = target - nums[i];
 
         if (mappedNums.find(delta) != mappedNums.end() && mappedNums[delta] != i) {
