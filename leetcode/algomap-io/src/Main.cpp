@@ -25,7 +25,8 @@
 // #include "hashmapsAndSets/validAnagram/ValidAnagram.hpp"
 // #include "hashmapsAndSets/maximumNumberOfBalloons/MaximumNumberOfBalloons.hpp"
 // #include "hashmapsAndSets/twoSum/TwoSum.hpp"
-#include "hashmapsAndSets/validSudoku/ValidSudoku.hpp"
+// #include "hashmapsAndSets/validSudoku/ValidSudoku.hpp"
+#include "hashmapsAndSets/groupAnagrams/GroupAnagrams.hpp"
 
 using namespace std;
 
@@ -271,7 +272,7 @@ int main()
 
 
     // VALID SUDOKU
-    ValidSudoku vs;
+    /*ValidSudoku vs;
 
     // vector<vector<char>> grid = {{'5','3','.','.','7','.','.','.','.'},
     //                             {'6','.','.','1','9','5','.','.','.'},
@@ -299,6 +300,26 @@ int main()
         cout << endl << endl << "Valid grid" << endl;
     } else {
         cout << endl << endl << "Invalid grid" << endl;
+    }*/
+
+
+    // GROUP ANAGRAMS
+    GroupAnagrams ga;
+
+    // vector<string> strs = {""};
+    // vector<string> strs = {"a"};
+    vector<string> strs = {"eat","tea","tan","ate","nat","bat"};
+
+    vector<vector<string>> result = ga.groupAnagrams(strs);
+
+    for (size_t i = 0; i < result.size(); ++i) {
+        cout << "Group n°" << i << '{';
+
+        for (string elem : result[i]) {
+            cout << '"' << elem << "\", ";
+        }
+
+        cout << '}' << endl << endl;
     }
 
 	return 0;
