@@ -1,7 +1,6 @@
 #ifndef GROUPANAGRAMS_HPP
 #define GROUPANAGRAMS_HPP
 
-#include <map>
 #include <string>
 #include <vector>
 
