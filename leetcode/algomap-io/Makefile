@@ -37,7 +37,9 @@ MODULES = $(SRC_DIR)/$(HAS_DIR)/jewelsAndStones/JewelsAndStones.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/maximumNumberOfBalloons/MaximumNumberOfBalloons.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/twoSum/TwoSum.cpp \
 			$(SRC_DIR)/$(HAS_DIR)/validSudoku/ValidSudoku.cpp \
-			$(SRC_DIR)/$(HAS_DIR)/groupAnagrams/GroupAnagrams.cpp 
+			$(SRC_DIR)/$(HAS_DIR)/groupAnagrams/GroupAnagrams.cpp \
+			$(SRC_DIR)/$(HAS_DIR)/majorityElement/MajorityElement.cpp \
+			$(SRC_DIR)/$(HAS_DIR)/longestConsecutiveSequence/LongestConsecutiveSequence.cpp 
 BUILD_DIR = ./build
 DOC_DIR = ./doc
 INCLUDE_DIR = ./include

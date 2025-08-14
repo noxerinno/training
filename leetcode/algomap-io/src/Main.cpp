@@ -26,7 +26,9 @@
 // #include "hashmapsAndSets/maximumNumberOfBalloons/MaximumNumberOfBalloons.hpp"
 // #include "hashmapsAndSets/twoSum/TwoSum.hpp"
 // #include "hashmapsAndSets/validSudoku/ValidSudoku.hpp"
-#include "hashmapsAndSets/groupAnagrams/GroupAnagrams.hpp"
+// #include "hashmapsAndSets/groupAnagrams/GroupAnagrams.hpp"
+// #include "hashmapsAndSets/majorityElement/MajorityElement.hpp"
+#include "hashmapsAndSets/longestConsecutiveSequence/LongestConsecutiveSequence.hpp"
 
 using namespace std;
 
@@ -304,7 +306,7 @@ int main()
 
 
     // GROUP ANAGRAMS
-    GroupAnagrams ga;
+    /*GroupAnagrams ga;
 
     // vector<string> strs = {""};
     // vector<string> strs = {"a"};
@@ -320,7 +322,26 @@ int main()
         }
 
         cout << '}' << endl << endl;
-    }
+    }*/
+
+
+    // MAJORITY ELEMENT
+    /*MajorityElement me;
+
+    // vector<int> nums = {3,2,3};
+    vector<int> nums = {2,2,1,1,1,2,2};
+
+    cout << me.majorityElement(nums);*/
+
+
+    // LONGEST CONSECUTIVE SEQUENCE
+    LongestConsecutiveSequence lcs;
+
+    vector<int> nums = {100,4,200,1,3,2};
+    // vector<int> nums = {0,3,7,2,5,8,4,6,0,1};
+    // vector<int> nums = {1,0,1,2};
+
+    cout << lcs.longestConsecutive(nums);
 
 	return 0;
 }
