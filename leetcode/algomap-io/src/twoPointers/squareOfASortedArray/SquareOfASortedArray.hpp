@@ -9,6 +9,4 @@ public:
     std::vector<int> sortedSquares(std::vector<int>& nums);
 };
 
-SquareOfASortedArray::SquareOfASortedArray() {}
-
 #endif  // SQUAREOFASORTEDARRAY_HPP

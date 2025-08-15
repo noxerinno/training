@@ -28,7 +28,12 @@
 // #include "hashmapsAndSets/validSudoku/ValidSudoku.hpp"
 // #include "hashmapsAndSets/groupAnagrams/GroupAnagrams.hpp"
 // #include "hashmapsAndSets/majorityElement/MajorityElement.hpp"
-#include "hashmapsAndSets/longestConsecutiveSequence/LongestConsecutiveSequence.hpp"
+// #include "hashmapsAndSets/longestConsecutiveSequence/LongestConsecutiveSequence.hpp"
+
+
+// CHAPTER 3 : Two pointers
+
+#include "twoPointers/squareOfASortedArray/SquareOfASortedArray.hpp"
 
 using namespace std;
 
@@ -335,13 +340,28 @@ int main()
 
 
     // LONGEST CONSECUTIVE SEQUENCE
-    LongestConsecutiveSequence lcs;
+    /*LongestConsecutiveSequence lcs;
 
     vector<int> nums = {100,4,200,1,3,2};
     // vector<int> nums = {0,3,7,2,5,8,4,6,0,1};
     // vector<int> nums = {1,0,1,2};
 
-    cout << lcs.longestConsecutive(nums);
+    cout << lcs.longestConsecutive(nums);*/
+
+
+    // SQUARE OF A SORTED ARRAY
+    SquareOfASortedArray soasa;
+
+    // vector<int> nums = {-4,-1,0,3,10};
+    vector<int> nums = {-7,-3,2,3,11};
+
+    vector<int> result = soasa.sortedSquares(nums);
+
+    cout << "Result : [";
+    for (int num : result) {
+        cout << num << ", ";
+    }
+    cout << ']' << endl << endl;
 
 	return 0;
 }
